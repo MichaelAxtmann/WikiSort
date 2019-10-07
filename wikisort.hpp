@@ -376,7 +376,7 @@ namespace Wiki {
 
     // bottom-up merge sort combined with an in-place merge algorithm for O(1) memory use
 template <typename RandomAccessIterator, typename Comparison = std::less<>>
-void Sort(RandomAccessIterator first, RandomAccessIterator last, Comparison compare = Comparator()) {
+void Sort(RandomAccessIterator first, RandomAccessIterator last, Comparison compare = Comparison()) {
         // map first and last to a C-style array, so we don't have to change the rest of the code
         // (bit of a nasty hack, but it's good enough for now...)
         typedef typename std::iterator_traits<RandomAccessIterator>::value_type T;
